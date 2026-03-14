@@ -8,13 +8,14 @@ Repositori ini digunakan untuk **manajemen dan pengumpulan tugas praktikum** mah
 
 ## 👨‍🏫 Informasi Asisten
 
-| | |
-|---|---|
-| **Asisten Praktikum** | Mahendra Kirana M.B. |
-| **Instansi** | Universitas Hasanuddin |
-| **Jumlah Praktikan** | 11 Orang |
-| **Bahasa Pemrograman** | Java (Android) |
-| **IDE** | Android Studio |
+|                              |                        |
+| ---------------------------- | ---------------------- |
+| **Asisten Praktikum**  | Mahendra Kirana M B    |
+| **Instansi**           | Universitas Hasanuddin |
+| **Jumlah Praktikan**   | 11 Orang               |
+| **Jumlah Praktikum**   | 7 Pertemuan            |
+| **Bahasa Pemrograman** | Java (Android)         |
+| **IDE**                | Android Studio         |
 
 ---
 
@@ -42,7 +43,7 @@ Setiap tugas praktikum memiliki folder tersendiri. Mahasiswa **wajib** membuat s
 │
 ├── ...
 │
-└── Tugas-Praktikum_11/
+└── Tugas-Praktikum_07/
     └── NIM_Nama_Lengkap/
 ```
 
@@ -52,11 +53,11 @@ Setiap tugas praktikum memiliki folder tersendiri. Mahasiswa **wajib** membuat s
 NIM_Nama_Lengkap
 ```
 
-| Komponen | Contoh |
-|---|---|
-| NIM | `H071231001` |
-| Pemisah | `_` (underscore) |
-| Nama Lengkap | `Budi_Santoso` |
+| Komponen        | Contoh                                |
+| --------------- | ------------------------------------- |
+| NIM             | `H071231001`                        |
+| Pemisah         | `_` (underscore)                    |
+| Nama Lengkap    | `Budi_Santoso`                      |
 | **Hasil** | **`H071231001_Budi_Santoso`** |
 
 > ⚠️ **Gunakan underscore (`_`), BUKAN spasi.** Folder dengan spasi akan menyebabkan masalah di Git.
@@ -154,10 +155,10 @@ git push origin main
 Submit Tugas Praktikum XX - NIM - Nama Lengkap
 ```
 
-| Contoh |
-|---|
+| Contoh                                                    |
+| --------------------------------------------------------- |
 | `Submit Tugas Praktikum 01 - H071231001 - Budi Santoso` |
-| `Submit Tugas Praktikum 05 - H071231002 - Siti Aminah` |
+| `Submit Tugas Praktikum 05 - H071231002 - Siti Aminah`  |
 
 ---
 
@@ -204,15 +205,15 @@ Submit Tugas Praktikum XX - NIM - Nama Lengkap
 Folder project Android Studio sangat besar (bisa **>100MB**) karena file hasil kompilasi.
 **DILARANG KERAS** melakukan push pada file/folder berikut:
 
-| ❌ File / Folder | Keterangan | Ukuran Rata-rata |
-|---|---|---|
-| `.gradle/` | Cache Gradle | ~50-200 MB |
-| `.idea/` | Konfigurasi IDE | ~5-10 MB |
-| `build/` | Folder hasil kompilasi | ~50-300 MB |
-| `local.properties` | Path SDK lokal (berisi path komputer Anda) | <1 KB |
-| `*.apk` | File aplikasi hasil build | ~5-50 MB |
-| `*.aab` | File bundle hasil build | ~5-50 MB |
-| `captures/` | Screenshot/video profiling | Bervariasi |
+| ❌ File / Folder     | Keterangan                                 | Ukuran Rata-rata |
+| -------------------- | ------------------------------------------ | ---------------- |
+| `.gradle/`         | Cache Gradle                               | ~50-200 MB       |
+| `.idea/`           | Konfigurasi IDE                            | ~5-10 MB         |
+| `build/`           | Folder hasil kompilasi                     | ~50-300 MB       |
+| `local.properties` | Path SDK lokal (berisi path komputer Anda) | <1 KB            |
+| `*.apk`            | File aplikasi hasil build                  | ~5-50 MB         |
+| `*.aab`            | File bundle hasil build                    | ~5-50 MB         |
+| `captures/`        | Screenshot/video profiling                 | Bervariasi       |
 
 ### Cara Memastikan File Tidak Ikut Ter-push
 
@@ -280,6 +281,7 @@ File `.gitignore` di repositori ini **sudah dikonfigurasi** untuk mengabaikan fi
 <summary><strong>Q: Bagaimana jika saya salah menaruh tugas di folder yang salah?</strong></summary>
 
 Pindahkan folder ke lokasi yang benar, lalu commit ulang:
+
 ```bash
 git mv Tugas-Praktikum_01/NIM_Nama Tugas-Praktikum_02/NIM_Nama
 git commit -m "Fix: Pindah tugas ke folder yang benar"
@@ -292,16 +294,20 @@ git push origin main
 <summary><strong>Q: Pull Request saya conflict, bagaimana cara mengatasinya?</strong></summary>
 
 Sinkronisasi ulang fork Anda:
+
 ```bash
 git fetch upstream
 git merge upstream/main
 ```
+
 Jika ada conflict, selesaikan secara manual, lalu:
+
 ```bash
 git add .
 git commit -m "Resolve merge conflict"
 git push origin main
 ```
+
 PR akan otomatis ter-update.
 
 </details>
@@ -317,6 +323,7 @@ Ya, selama deadline belum lewat. Cukup push ulang ke fork Anda dan PR akan otoma
 <summary><strong>Q: Kenapa PR saya ditolak?</strong></summary>
 
 Kemungkinan penyebab:
+
 - Folder `build/`, `.gradle/`, `.idea/` ikut ter-push (ukuran terlalu besar)
 - Format folder identitas salah
 - Commit message tidak sesuai format
