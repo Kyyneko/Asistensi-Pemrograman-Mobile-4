@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_main"
+    android:fitsSystemWindows="true"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="32dp">
+            <ImageView
+                android:id="@+id/iv_back_from_edit"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:src="@drawable/icon_back" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="Edit Profile"
+                android:textColor="@color/text_primary"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="32dp">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cv_photo_wrapper"
+                android:layout_width="140dp"
+                android:layout_height="140dp"
+                app:cardCornerRadius="70dp"
+                app:cardElevation="2dp">
+                <ImageView
+                    android:id="@+id/iv_edit_photo_real"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@android:drawable/ic_menu_gallery"
+                    android:scaleType="centerCrop"
+                    android:background="@color/bg_card"/>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cv_btn_pick_photo"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignBottom="@id/cv_photo_wrapper"
+                android:layout_alignEnd="@id/cv_photo_wrapper"
+                app:cardCornerRadius="20dp"
+                app:cardBackgroundColor="#0263A1"
+                app:cardElevation="4dp">
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/icon_camera"/>
+            </androidx.cardview.widget.CardView>
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tv_revert_avatar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Revert to Avatar"
+            android:textColor="#F44336"
+            android:textStyle="bold"
+            android:layout_marginTop="-16dp"
+            android:layout_marginBottom="24dp"
+            android:padding="8dp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Full Name"
+            android:textColor="@color/text_secondary"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="8dp"/>
+        <EditText
+            android:id="@+id/et_edit_name"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:background="@color/bg_card"
+            android:textColor="@color/text_primary"
+            android:hint="Enter your new name"
+            android:textColorHint="@color/text_secondary"
+            android:inputType="textPersonName"
+            android:paddingHorizontal="16dp"
+            android:layout_marginBottom="20dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Email / ID"
+            android:textColor="@color/text_secondary"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="8dp"/>
+        <EditText
+            android:id="@+id/et_edit_email"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:background="@color/bg_card"
+            android:textColor="@color/text_primary"
+            android:hint="Enter your new email"
+            android:textColorHint="@color/text_secondary"
+            android:inputType="textEmailAddress"
+            android:paddingHorizontal="16dp"
+            android:layout_marginBottom="20dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="New Password"
+            android:textColor="@color/text_secondary"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="8dp"/>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="40dp">
+
+            <EditText
+                android:id="@+id/et_edit_password"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:background="@color/bg_card"
+                android:textColor="@color/text_primary"
+                android:hint="Enter your new password"
+                android:textColorHint="@color/text_secondary"
+                android:inputType="textPassword"
+                android:paddingStart="16dp"
+                android:paddingEnd="50dp"/>
+            <ImageView
+                android:id="@+id/iv_toggle_password"
+                android:layout_width="55dp"
+                android:layout_height="55dp"
+                android:layout_gravity="end|center_vertical"
+                android:padding="12dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/icon_eye_closed" />
+        </FrameLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_save_profile_changes"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:text="Save Changes"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:backgroundTint="#0263A1"
+            android:textColor="@color/bg_card"
+            app:cornerRadius="16dp" />
+
+    </LinearLayout>
+</ScrollView>
