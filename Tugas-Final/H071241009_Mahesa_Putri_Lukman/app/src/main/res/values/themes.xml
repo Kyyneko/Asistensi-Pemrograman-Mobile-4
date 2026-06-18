@@ -1,0 +1,17 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.SkillSaga" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your light theme here. -->
+        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+        <item name="colorSecondaryContainer">@color/nav_indicator</item>
+    </style>
+
+    <style name="Theme.SkillSaga" parent="Base.Theme.SkillSaga" />
+    <style name="Theme.BottomNavStyle" parent="">
+        <item name="colorSecondaryContainer">#BBDEFB</item>
+    </style>
+    <style name="CustomBottomNavTheme" parent="">
+        <item name="colorSecondaryContainer">@color/nav_indicator</item>
+        <item name="colorPrimary">@color/nav_indicator</item>
+    </style>
+</resources>
